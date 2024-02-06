@@ -18,6 +18,77 @@ Hanoi sorts starts by creating a Tower of Hanoi state, initialising one tower to
 
 A move is a valid Hanoi move if either: the item is being put onto an empty tower, or if the item is being put on top of an item smaller than it according to the comparator (so that they are in order).
 
+## Example
+
+Let us attempt to sort the list `[2, 3, 1]`, aiming to sort the list in ascending order
+
+We represent the Hanoi state as three columns, yielding the initial state as follows:
+```
+A|B|C
+-|-|-
+1| | 
+3| | 
+2| | 
+```
+We pick column `B` and column `A`. Since column `B` is empty, the move is invalid and we pick again.  
+We pick column `A` and column `A`. Since the columns are the same, the move is invalid and we pick again.  
+We pick column `C` and column `B`. Since both columns are empty, we check to see if `A` is in order. It is not, so we pick again.  
+We pick column `A` and column `B`. The move is valid, so the new state is:
+```
+A|B|C
+-|-|-
+ | | 
+3| | 
+2|1| 
+```
+We pick column `C` and column `B`. Since column `C` is empty, the move is invalid and we pick again.  
+We pick column `A` and column `B`. The move is valid, so the new state is:
+```
+A|B|C
+-|-|-
+ | | 
+ |3| 
+2|1| 
+```
+We pick column `A` and column `B`. Since `2` need to come before `3`, the move is invalid and we pick again.  
+We pick column `B` and column `C`. The move is valid so the new state is:
+```
+A|B|C
+-|-|-
+ | | 
+ | | 
+2|1|3 
+```
+We pick column `A` and column `B`. The move is valid, so the new state is:
+```
+A|B|C
+-|-|-
+ | | 
+ |2| 
+ |1|3 
+```
+We pick column `C` and column `A`. The move is valid, so the new state is:
+```
+A|B|C
+-|-|-
+ | | 
+ |2| 
+3|1|
+```
+We pick column `C` and column `C`. Since the columns are the same, the move is invalid and we pick again.  
+We pick column `A` and column `B`. The move is valid, so the new state is:
+```
+A|B|C
+-|-|-
+ |3| 
+ |2| 
+ |1|
+```
+We pick column `B` and column `B`. Since the columns are the same, the move is invalid and we pick again.  
+We pick column `C` and column `B`. Since column `C` is empty, the move is invalid and we pick again.  
+We pick column `A` and column `B`. Since column `C` is empty, the move is invalid and we pick again.  
+We pick column `C` and column `A`. Since both columns are empty, we check to see if `B` is in order. It is, so we return the contents of the column, returning `[1, 2, 3]`.  
+
 ## Time Complexity
 
 I may calculate this one day. Probably not though. It is probably at least on average exponential, since solving the tower of Hanoi is exponential.
