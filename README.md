@@ -3,8 +3,7 @@
 
 Hanoi sort is a sorting algorithm based on the Tower of Hanoi.
 
-To run this application, run `python3 hanoi_sort.py`. The interface expects users to input the list of integers they wish to sort in the order they appear in the list.
-Alternatively, the defined function `hanoi_sort(comp, lst)` can be called in code, where `comp` is the comparator for the items of the list (defined as if `x < y`, then `comp(x, y) < 0`, if `x == y`, then `comp(x, y) == 0`, and if `x > y`, then `comp(x, y) > 0`), and `lst` is the list of items to be sorted. The list will be sorted in ascending order.
+To run this application, run `python3 hanoi_sort.py`. The interface expects users to input the list of integers they wish to sort in the order they appear in the list. Alternatively, the defined function `hanoi_sort(comp, lst)` can be called in code, where `comp` is the comparator for the items of the list (defined as if `x < y`, then `comp(x, y) < 0`, if `x == y`, then `comp(x, y) == 0`, and if `x > y`, then `comp(x, y) > 0`), and `lst` is the list of items to be sorted. The list will be sorted in ascending order.
 
 ## Algorithm
 
