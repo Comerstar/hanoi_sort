@@ -14,14 +14,14 @@ def hanoi_sort(comp, lst):
                     z = 3 - x - y
                     sorted = True
                     for i in range(len(stacks[z]) - 1):
-                        if comp(stacks[z][i], stacks[z][i+1]) <= 0:
+                        if comp(stacks[z][i], stacks[z][i+1]) > 0:
                             sorted = False
                             break
                     if sorted:
                          return stacks[z]
             elif len(stacks[y]) != 0:
                 # Check if action is valid and if so perform it
-                if (comp(stacks[x][-1], stacks[y][-1]) <= 0):
+                if (comp(stacks[x][-1], stacks[y][-1]) >= 0):
                     stacks[y].append(stacks[x][-1])
                     stacks[x].pop()
             else:
@@ -39,4 +39,4 @@ try:
 
 except Exception:
     print(test)
-    print(hanoi_sort(lambda x, y: y - x, test))
+    print(hanoi_sort(lambda x, y: x - y, test))
