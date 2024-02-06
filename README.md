@@ -11,8 +11,8 @@ Alternatively, the defined function `hanoi_sort(comp, lst)` can be called in cod
 
 Hanoi sorts starts by creating a Tower of Hanoi state, initialising one tower to the input list. It then repeats the following indefinitely until a valid check occurs:
 
-1) We choose two random Hanoi spaces, x and y
-2) If they are the same, we return to the top
+1) We choose two random Hanoi spaces, x and y.
+2) If they are the same, we return to the top.
 3) If both the chosen spaces are empty, then we check if the final remaining space is sorted. If it is we return.
 4) Otherwise, we check if moving the top item from x to y is a valid Hanoi move. If it is we perform the Hanoi move.
 
