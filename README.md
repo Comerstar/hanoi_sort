@@ -91,4 +91,4 @@ We pick column `C` and column `A`. Since both columns are empty, we check to see
 
 ## Time Complexity
 
-I may calculate this one day. Probably not though. It is probably at least on average exponential, since solving the tower of Hanoi is exponential.
+I may calculate this one day. Probably not though. Its worst case is trivially unbound: it could keep choosing to move an item between two valid spots. Its best case is trivially linear: if the list is already sorted, and it happens to choose the two spots which are empty, then it merely performs one check to ensure the list is sorted, which is linear. It is probably at least exponential on average, since solving the tower of Hanoi is exponential.
